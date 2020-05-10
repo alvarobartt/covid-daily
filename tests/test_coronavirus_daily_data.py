@@ -6,7 +6,7 @@ import pytest
 import coronavirus_daily_data
 
 
-def overview_tests():
+def test_overview():
     params = [
         {
             'as_json': True
@@ -17,8 +17,8 @@ def overview_tests():
     ]
 
     for param in params:
-        assert coronavirus_daily_data.overview(as_json=param['as_json'])
+        coronavirus_daily_data.overview(as_json=param['as_json'])
 
 
 if __name__ == "__main__":
-    overview_tests()
+    test_overview()
