@@ -4,4 +4,4 @@
 __author__ = 'Alvaro Bartolome del Canto'
 __version__ = '1'
 
-from .sample import sample_function
+from .scraper import overview

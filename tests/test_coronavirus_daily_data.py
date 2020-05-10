@@ -6,19 +6,19 @@ import pytest
 import coronavirus_daily_data
 
 
-def sample_tests():
+def overview_tests():
     params = [
         {
-            'value': True
+            'as_json': True
         },
         {
-            'value': False
+            'as_json': False
         }
     ]
 
     for param in params:
-        assert coronavirus_daily_data.sample_function(value=param['value'])
+        assert coronavirus_daily_data.overview(as_json=param['as_json'])
 
 
 if __name__ == "__main__":
-    sample_tests()
+    overview_tests()
