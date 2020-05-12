@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = coronavirus_daily_data
+SPHINXPROJ    = covid_daily_data
 SOURCEDIR     = .
 BUILDDIR      = _build
 

@@ -18,15 +18,15 @@ def requirements(filename):
 
 
 setup(
-    name='coronavirus_daily_data',
+    name='covid_daily_data',
     version='1',
     packages=find_packages(),
-    url="https://www.github.com/alvarobartt/coronavirus_daily_data",
-    download_url='https://github.com/alvarobartt/coronavirus_daily_data/archive/1.tar.gz',
+    url="https://www.github.com/alvarobartt/covid_daily_data",
+    download_url='https://github.com/alvarobartt/covid_daily_data/archive/1.tar.gz',
     license='MIT License',
     author='Alvaro Bartolome del Canto',
     author_email='alvarob96@usal.es',
-    description='coronavirus_daily_data — Coronavirus (COVID-19) Daily Data from Worldometer with Python',
+    description='covid_daily_data — Coronavirus (COVID-19) Daily Data from Worldometer with Python',
     long_description=readme(),
     long_description_content_type='text/markdown',
     install_requires=requirements(filename='requirements.txt'),
@@ -48,8 +48,8 @@ setup(
     },
     python_requires='>=3',
     project_urls={
-        'Bug Reports': 'https://github.com/alvarobartt/coronavirus_daily_data/issues',
-        'Source': 'https://github.com/alvarobartt/coronavirus_daily_data',
-        'Documentation': 'https://coronavirus_daily_data.readthedocs.io/'
+        'Bug Reports': 'https://github.com/alvarobartt/covid_daily_data/issues',
+        'Source': 'https://github.com/alvarobartt/covid_daily_data',
+        'Documentation': 'https://covid_daily_data.readthedocs.io/'
     },
 )

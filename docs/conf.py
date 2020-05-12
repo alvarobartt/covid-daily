@@ -20,7 +20,7 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'coronavirus_daily_data'
+project = 'covid_daily_data'
 copyright = '2020, Alvaro Bartolome del Canto'
 author = 'Alvaro Bartolome del Canto'
 
@@ -111,7 +111,7 @@ html_static_path = []
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'coronavirus_daily_datadoc'
+htmlhelp_basename = 'covid_daily_datadoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -140,8 +140,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        'coronavirus_daily_data.tex',
-        'coronavirus_daily_data Documentation',
+        'covid_daily_data.tex',
+        'covid_daily_data Documentation',
         'Alvaro Bartolome del Canto',
         'manual'
     ),
@@ -155,8 +155,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        'coronavirus_daily_data',
-        'coronavirus_daily_data Documentation',
+        'covid_daily_data',
+        'covid_daily_data Documentation',
         [author],
         1
     ),
@@ -171,10 +171,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        'coronavirus_daily_data',
-        'coronavirus_daily_data Documentation',
+        'covid_daily_data',
+        'covid_daily_data Documentation',
         author,
-        'coronavirus_daily_data',
+        'covid_daily_data',
         'Coronavirus (COVID-19) Daily Data from Worldometer with Python.',
         'Miscellaneous'
     ),

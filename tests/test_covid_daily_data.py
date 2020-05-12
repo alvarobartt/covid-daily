@@ -3,7 +3,7 @@
 
 import pytest
 
-import coronavirus_daily_data
+import covid_daily_data
 
 
 def test_overview():
@@ -17,7 +17,7 @@ def test_overview():
     ]
 
     for param in params:
-        coronavirus_daily_data.overview(as_json=param['as_json'])
+        covid_daily_data.overview(as_json=param['as_json'])
 
 
 if __name__ == "__main__":

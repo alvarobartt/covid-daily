@@ -1,9 +1,9 @@
-.. coronavirus_daily_data documentation master file, created by
+.. covid_daily_data documentation master file, created by
    sphinx-quickstart on 10/05/2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to coronavirus_daily_data's documentation!
+Welcome to covid_daily_data's documentation!
 ===========================================================
 
 .. toctree::

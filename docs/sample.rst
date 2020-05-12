@@ -1,7 +1,7 @@
-:mod:`coronavirus_daily_data.scraper`
-=====================================
+:mod:`covid_daily_data.codiv`
+=============================
 
-.. automodule:: coronavirus_daily_data.scraper
+.. automodule:: covid_daily_data.covid
    :special-members:
    :exclude-members:
    :members:

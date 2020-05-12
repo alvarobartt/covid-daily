@@ -1,4 +1,4 @@
-name: coronavirus_daily_data
+name: covid_daily_data
 
 on: [push]
 
