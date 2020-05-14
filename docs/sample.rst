@@ -1,7 +1,7 @@
-:mod:`covid_daily_data.codiv`
+:mod:`covid_daily.codiv`
 =============================
 
-.. automodule:: covid_daily_data.covid
+.. automodule:: covid_daily.covid
    :special-members:
    :exclude-members:
    :members:

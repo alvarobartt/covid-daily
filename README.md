@@ -20,20 +20,20 @@ This repository contains a complete Python Web Scraper which retrieves all the d
 
 In order to get this package working you will need to **install it via pip** (with a Python3.5 version or higher) on the terminal by typing:
 
-``$ pip install covid_daily_data``
+``$ pip install covid_daily``
 
 ## Documentation
 
-You can find the **complete developer documentation** at: https://covid_daily_data.readthedocs.io/, hosted on [Read the Docs](https://readthedocs.org/) and generated using [sphinx](https://www.sphinx-doc.org/en/master/) with the theme [sphinx_rtd_theme](https://github.com/readthedocs/sphinx_rtd_theme) which is the standard Read the Docs theme for sphinx.
+You can find the **complete developer documentation** at: https://covid_daily.readthedocs.io/, hosted on [Read the Docs](https://readthedocs.org/) and generated using [sphinx](https://www.sphinx-doc.org/en/master/) with the theme [sphinx_rtd_theme](https://github.com/readthedocs/sphinx_rtd_theme) which is the standard Read the Docs theme for sphinx.
 
 ## Usage
 
 So as to use this Python package, a sample piece of code is presented below:
 
 ```python
-import covid_daily_data
+import covid_daily
 
-covid_daily_data.overview()
+covid_daily.overview()
 ```
 
 So on, the previous piece of code outputs the following line:
@@ -49,7 +49,7 @@ So on, the previous piece of code outputs the following line:
 
 ## Contribute
 
-As this is an open source project it is **open to contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas**. There is an open tab of [issues](https://github.com/alvarobartt/covid_daily_data/issues) where anyone can open new issues if needed or navigate through them in order to solve them or contribute to its solving. Remember that **issues are not threads to describe multiple problems**, this does not mean that issues can't be discussed, but so to keep a structured project management, the same issue should not describe different problems, just the main one and some nested/related errors that may be found.
+As this is an open source project it is **open to contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas**. There is an open tab of [issues](https://github.com/alvarobartt/covid_daily/issues) where anyone can open new issues if needed or navigate through them in order to solve them or contribute to its solving. Remember that **issues are not threads to describe multiple problems**, this does not mean that issues can't be discussed, but so to keep a structured project management, the same issue should not describe different problems, just the main one and some nested/related errors that may be found.
 
 ## Citation
 
@@ -57,13 +57,13 @@ When citing this repository on your publications please use the following **BibT
 
 ```
 @misc{
-    covid_daily_data,
+    covid_daily,
     author = { Alvaro Bartolome del Canto },
-    title = { covid_daily_data - COVID-19 Daily Data from Worldometers with Python },
+    title = { covid_daily - COVID-19 Daily Data from Worldometers with Python },
     year = { 2020 },
     publisher = {GitHub},
     journal = {GitHub Repository},
-    howpublished = {\url{https://github.com/alvarobartt/covid_daily_data}}
+    howpublished = {\url{https://github.com/alvarobartt/covid_daily}}
 }
 ```
 

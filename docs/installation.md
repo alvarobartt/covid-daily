@@ -2,7 +2,7 @@
 
 In order to get this package working you will need to **install it via pip** (with a Python3.5 version or higher) on the terminal by typing:
 
-``$ pip install covid_daily_data``
+``$ pip install covid_daily``
 
 Additionally, **if you want to use the latest version instead of the stable one**, you can just use the following command:
 
