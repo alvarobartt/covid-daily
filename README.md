@@ -2,14 +2,6 @@
 
 This repository contains a complete Python Web Scraper which retrieves all the data provided by [Worldometers](https://www.worldometers.info/coronavirus/) related to the COVID-19 (Coronavirus) pandemic. So on, all the data available from every country is retrieved and transformed into CSV files using a simple Python script.
 
-## TODO
-
-- Include real time data on the package so as to let the users keep a real time tracking of the virus such as the website does.
-- Include a "Latest Updates" section on the README which will be updated daily too
-- Also so as to provide the data in a more generic way, a simple Flask RESTX API will be created using [restx-cookie](https://github.com/alvarobartt/restx-cookie), after developing the Python package so that the API endpoints will just be calls to the package functions
-- Include some simple stats in the README so as to provide useful information for the Github users that visit this repository
-- and much more to come...
-
 ## Features
 
 - Detailed data from every country available at worldometers.info/coronavirus, which is indeed every country affected by the pandemic.
@@ -38,6 +30,8 @@ overview = covid_daily.overview(as_json=False)
 print(overview.head())
 ```
 
+As already mentioned, this function retrieves an overview of the COVID-19 from all the available countries as indexed in Worldometers.info/coronavirus
+
 ```{r, engine='python', count_lines}
     Country,Other TotalCases NewCases TotalDeaths NewDeaths  ... Serious,Critical TotCases/1M pop Deaths/1M pop TotalTests Tests/1M pop
 0           World  4,125,046  +26,758     280,957      +733  ...           47,637             529          36.0        NaN          NaN
@@ -57,6 +51,8 @@ data = covid_daily.data(country='spain', chart='total-currently-infected-linear'
 print(data.head())
 ```
 
+Which returns a `pandas.DataFrame` containing all the information provided by Worldometers related to the total amoun of infected people because of the COVID-19 in Spain, in this case.
+
 ```{r, engine='python', count_lines}
             Currently Infected
 Date                          
@@ -67,7 +63,7 @@ Date
 2020-05-13               60764
 ```
 
-All the available countries can be found at [AVAILABLE_COUNTRIES](https://github.com/alvarobartt/covid-daily-data/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L1) and all the available char types at [AVAILABLE_CHARTS](https://github.com/alvarobartt/covid-daily-data/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L41).
+Note that this functions lets the user change the country and the chart type from which data will be retrieved, containing different statistics. All the available countries can be found at [AVAILABLE_COUNTRIES](https://github.com/alvarobartt/covid-daily-data/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L1) and all the available chart types at [AVAILABLE_CHARTS](https://github.com/alvarobartt/covid-daily-data/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L41).
 
 ### Retrieve & Plot all the available charts
 
@@ -90,6 +86,8 @@ for idx, available_chart in enumerate(AVAILABLE_CHARTS):
 fig.tight_layout()
 fig.show()
 ```
+
+The resulting figure containing all the data (charts) from Spain, as previously retrieved, is shown below, generated after the previous code block.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/alvarobartt/covid-daily/master/docs/_static/covid-daily-plot.png"/>

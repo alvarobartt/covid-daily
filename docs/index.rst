@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to covid_daily's documentation!
-===========================================================
+=======================================
 
 .. toctree::
    :maxdepth: 3
@@ -14,6 +14,7 @@ Welcome to covid_daily's documentation!
    installation.md
    documentation.md
    usage.md
+   api.rst
    contribute.md
    citation.md
    credits.md
