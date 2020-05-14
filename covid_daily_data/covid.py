@@ -7,9 +7,14 @@ from lxml.html import fromstring
 import pandas as pd
 import json
 
+from unidecode import unidecode
+
+from datetime import datetime
+
 import numpy as np
 
-from .auxiliar import is_visible
+from .utils import is_visible, highcharts_parser
+from .constants import AVAILABLE_COUNTRIES, AVAILABLE_CHARTS
 
 
 def overview(as_json=False):
@@ -31,7 +36,7 @@ def overview(as_json=False):
 
     Raises:
         ValueError: raised if any of the introduced parameters is not valid
-        ConnectionError: raised if connection with Worldometer failed
+        ConnectionError: raised if connection with Worldometers failed
 
     """
 
@@ -43,7 +48,7 @@ def overview(as_json=False):
     req = requests.get(url)
 
     if req.status_code != 200:
-        raise ConnectionError("Connection to Worldometer.info did not succeed, error code: " + str(req.status_code))
+        raise ConnectionError("Connection to Worldometers.info did not succeed, error code: " + str(req.status_code))
 
     root = fromstring(req.text)
     table = root.xpath(".//table[@id='main_table_countries_today'][1]")[0]
@@ -72,3 +77,52 @@ def overview(as_json=False):
         return data
     elif as_json is True:
         return json.loads(json.dumps(data.to_dict(orient='records')))
+
+
+def data(country, chart, as_json=False):
+    """
+
+    """
+
+    if not isinstance(country, str):
+        raise ValueError("country must be a valid str.")
+
+    country = unidecode(country.strip().lower().replace(' ', '-'))
+
+    if country not in AVAILABLE_COUNTRIES:
+        raise ValueError("Introduced country is a valid value, but not a valid country.")
+
+    if not isinstance(chart, str):
+        raise ValueError("chart must be a valid str.")
+
+    if chart not in AVAILABLE_CHARTS:
+        raise ValueError("Introduced chart is a valid value, but not a valid chart.")
+
+    url = f"https://www.worldometers.info/coronavirus/country/{country}/"
+    
+    req = requests.get(url)
+    
+    if req.status_code != 200:
+        raise ConnectionError(f"Connection to worldometers.info/coronavirus failed with error code: {req.status_code}")
+        
+    root = fromstring(req.text)
+    scripts = root.xpath(".//script")
+    
+    for script in scripts:
+        if not script.text_content().strip().__contains__("Highcharts.chart"):
+            continue
+
+        chart_title = highcharts_parser(highchart_script=script, just_title=True)
+
+        if chart_title != chart:
+            continue
+
+        chart = highcharts_parser(highchart_script=script)
+
+        x = chart['series'][0]['data']
+        y = [datetime.strptime(value + ', 2020', '%b %d, %Y') for value in chart['xAxis']['categories']]
+
+        data = pd.DataFrame({'Date': y, chart['column']: x})
+        data.set_index('Date', inplace=True)
+
+        return data

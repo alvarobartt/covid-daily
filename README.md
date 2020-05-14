@@ -1,6 +1,6 @@
 # 🦠 :earth_africa: COVID-19 Daily Data 🦠 :earth_africa:
 
-This repository contains a complete Python Web Scraper which retrieves all the data provided by [Worldometer](https://www.worldometers.info/coronavirus/) related to the COVID-19 (Coronavirus) pandemic. So on, all the data available from every country is retrieved and transformed into CSV files using a simple Python script.
+This repository contains a complete Python Web Scraper which retrieves all the data provided by [Worldometers](https://www.worldometers.info/coronavirus/) related to the COVID-19 (Coronavirus) pandemic. So on, all the data available from every country is retrieved and transformed into CSV files using a simple Python script.
 
 ## TODO
 
@@ -12,7 +12,7 @@ This repository contains a complete Python Web Scraper which retrieves all the d
 
 ## Features
 
-- Detailed data from every country available at Worldometer, which is indeed every country affected by the pandemic.
+- Detailed data from every country available at worldometers.info/coronavirus, which is indeed every country affected by the pandemic.
 - Data is updated daily so you can track its evolution day by day.
 - A general overview on how the pandemic is affecting every country (real-time).
 
@@ -59,7 +59,7 @@ When citing this repository on your publications please use the following **BibT
 @misc{
     covid_daily_data,
     author = { Alvaro Bartolome del Canto },
-    title = { covid_daily_data - COVID-19 Daily Data from Worldometer with Python },
+    title = { covid_daily_data - COVID-19 Daily Data from Worldometers with Python },
     year = { 2020 },
     publisher = {GitHub},
     journal = {GitHub Repository},

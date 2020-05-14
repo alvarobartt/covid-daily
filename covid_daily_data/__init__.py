@@ -4,4 +4,9 @@
 __author__ = 'Alvaro Bartolome del Canto'
 __version__ = '1'
 
-from .covid import overview
+__functions__ = [
+    'overview(as_json)',
+    'data(country, chart, as_json)'
+]
+
+from .covid import overview, data

@@ -26,7 +26,7 @@ setup(
     license='MIT License',
     author='Alvaro Bartolome del Canto',
     author_email='alvarob96@usal.es',
-    description='covid_daily_data — Coronavirus (COVID-19) Daily Data from Worldometer with Python',
+    description='covid_daily_data — Coronavirus (COVID-19) Daily Data from Worldometers with Python',
     long_description=readme(),
     long_description_content_type='text/markdown',
     install_requires=requirements(filename='requirements.txt'),

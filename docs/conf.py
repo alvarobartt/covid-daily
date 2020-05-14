@@ -175,7 +175,7 @@ texinfo_documents = [
         'covid_daily_data Documentation',
         author,
         'covid_daily_data',
-        'Coronavirus (COVID-19) Daily Data from Worldometer with Python.',
+        'Coronavirus (COVID-19) Daily Data from Worldometers with Python.',
         'Miscellaneous'
     ),
 ]
