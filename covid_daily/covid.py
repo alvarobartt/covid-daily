@@ -98,12 +98,12 @@ def data(country, chart, as_json=False):
     if chart not in AVAILABLE_CHARTS:
         raise ValueError("Introduced chart is a valid value, but not a valid chart.")
 
-    url = f"https://www.worldometers.info/coronavirus/country/{country}/"
+    url = "https://www.worldometers.info/coronavirus/country/" + country + "/"
     
     req = requests.get(url)
     
     if req.status_code != 200:
-        raise ConnectionError(f"Connection to worldometers.info/coronavirus failed with error code: {req.status_code}")
+        raise ConnectionError("Connection to Worldometers.info did not succeed, error code: " + str(req.status_code))
         
     root = fromstring(req.text)
     scripts = root.xpath(".//script")
