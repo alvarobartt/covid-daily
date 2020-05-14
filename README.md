@@ -28,15 +28,15 @@ You can find the **complete developer documentation** at: https://covid_daily.re
 
 ## Usage
 
-So as to use this Python package, a sample piece of code is presented below:
+### Retrieve the World overview
 
 ```python
 import covid_daily
 
-covid_daily.overview()
-```
+overview = covid_daily.overview(as_json=False)
 
-So on, the previous piece of code outputs the following line:
+print(overview.head())
+```
 
 ```{r, engine='python', count_lines}
     Country,Other TotalCases NewCases TotalDeaths NewDeaths  ... Serious,Critical TotCases/1M pop Deaths/1M pop TotalTests Tests/1M pop
@@ -46,6 +46,55 @@ So on, the previous piece of code outputs the following line:
 3           Italy    218,268      NaN      30,395       NaN  ...            1,034           3,610           503  2,514,234       41,584
 4              UK    215,260      NaN      31,587       NaN  ...            1,559           3,171           465  1,728,443       25,461
 ```
+
+### Retrieve chart's data from every country
+
+```python
+import covid_daily
+
+data = covid_daily.data(country='spain', chart='total-currently-infected-linear', as_json=False)
+
+print(data.head())
+```
+
+```{r, engine='python', count_lines}
+            Currently Infected
+Date                          
+2020-05-09               63148
+2020-05-10               61603
+2020-05-11               63553
+2020-05-12               62130
+2020-05-13               60764
+```
+
+All the available countries can be found at [AVAILABLE_COUNTRIES](https://github.com/alvarobartt/covid-daily-data/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L1) and all the available char types at [AVAILABLE_CHARTS](https://github.com/alvarobartt/covid-daily-data/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L41).
+
+### Retrieve & Plot all the available charts
+
+```python
+import covid_daily
+from covid_daily.constants import AVAILABLE_CHARTS
+
+import matplotplib.pyplot as plt
+
+fig, axs = plt.subplots(3, 3, figsize=(20,15))
+
+from itertools import product
+
+pairs = list(product((range(3)), (range(3))))
+
+for idx, available_chart in enumerate(AVAILABLE_CHARTS):
+    data = covid_daily.data(country='spain', chart=available_chart, as_json=False)
+    data.plot(ax=axs[pairs[idx]], title=available_chart)
+
+fig.tight_layout()
+fig.show()
+```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/alvarobartt/covid-daily/master/docs/_static/covid-daily-plot.png"/>
+</p>
+
 
 ## Contribute
 
