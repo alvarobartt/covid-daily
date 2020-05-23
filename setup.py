@@ -19,10 +19,10 @@ def requirements(filename):
 
 setup(
     name='covid_daily',
-    version='1',
+    version='1.0',
     packages=find_packages(),
     url="https://www.github.com/alvarobartt/covid_daily",
-    download_url='https://github.com/alvarobartt/covid_daily/archive/1.tar.gz',
+    download_url='https://github.com/alvarobartt/covid_daily/archive/1.0.tar.gz',
     license='MIT License',
     author='Alvaro Bartolome del Canto',
     author_email='alvarob96@usal.es',

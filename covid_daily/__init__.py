@@ -2,7 +2,7 @@
 # See LICENSE for details.
 
 __author__ = 'Alvaro Bartolome del Canto'
-__version__ = '1'
+__version__ = '1.0'
 
 __functions__ = [
     'overview(as_json)',
