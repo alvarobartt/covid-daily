@@ -1,6 +1,14 @@
 # 🦠 :earth_africa: COVID-19 Daily Data 🦠 :earth_africa:
 
-This repository contains a complete Python Web Scraper which retrieves all the data provided by [Worldometers](https://www.worldometers.info/coronavirus/) related to the COVID-19 (Coronavirus) pandemic. So on, all the data available from every country is retrieved and transformed into CSV files using a simple Python script.
+This repository allows any user to easily download COVID-19 daily data from [Worldometers](https://www.worldometers.info/coronavirus/). Data is disaggregated per country, so you can retrieve COVID real time daily data from your own country and analyze it.
+
+## Contents
+
+* `scraper/`: contains the Jupyter Notebooks where the Web Scraper was developed and the "scripts" so as to download all the data by yourself.
+* `covid_daily/`: this is the Python Package directory, which contains the previously developed functions integrated into a simple Python package so that any user can easily access the data by themselves.
+* `data/`: contains a folder per country with all the available data as provided by Worldometers.
+* `tests/`: contains the tests using pytest to ensure that after each commit the package is still working properly.
+* `docs/`: contains the generated sphinx documentation, but you can see it at https://covid_daily.readthedocs.io
 
 ## Features
 
