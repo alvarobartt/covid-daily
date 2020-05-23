@@ -1,5 +1,11 @@
 # 🦠 :earth_africa: COVID-19 Daily Data 🦠 :earth_africa:
 
+[![Python Version](https://img.shields.io/pypi/pyversions/covid_daily.svg)](https://pypi.org/project/covid_daily/)
+[![PyPi Version](https://img.shields.io/pypi/v/covid_daily.svg)](https://pypi.org/project/covid_daily/)
+[![Package Status](https://img.shields.io/pypi/status/covid_daily.svg)](https://pypi.org/project/covid_daily/)
+[![Build Status](https://github.com/alvarobartt/covid-daily/workflows/covid_daily/badge.svg)](https://github.com/alvarobartt/covid-daily)
+[![Documentation Status](https://readthedocs.org/projects/covid_daily/badge/?version=latest)](https://covid_daily.readthedocs.io/)
+
 This repository allows any user to easily download COVID-19 daily data from [Worldometers](https://www.worldometers.info/coronavirus/). Data is disaggregated per country, so you can retrieve COVID real time daily data from your own country and analyze it.
 
 ## Contents
