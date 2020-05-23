@@ -19,7 +19,7 @@ from .constants import AVAILABLE_COUNTRIES, AVAILABLE_CHARTS
 
 def overview(as_json=False):
     """
-    This function will retrieve the coronavirus data overview from all the available countries 
+    This function retrieves the coronavirus data overview from all the available countries 
     from worldometers.info/coronavirus/, which contains real time data and statistics from multiple
     features realted to the virus. For more information, please visit: https://www.worldometers.info/coronavirus/
 
@@ -81,6 +81,30 @@ def overview(as_json=False):
 
 def data(country, chart, as_json=False):
     """
+    This function will retrieve the coronavirus data overview from all the available countries 
+    from worldometers.info/coronavirus/, which contains real time data and statistics from multiple
+    features realted to the virus. For more information, please visit: https://www.worldometers.info/coronavirus/
+
+    Args:
+        chart (:obj:`str`):
+            name of the country to retrieve the COVID data from (available values at: 
+            `covid_daily.constants.AVAILABLE_COUNTRIES`)
+        chart (:obj:`str`):
+            name of the chart to retrieve the COVID data from (available values at: 
+            `covid_daily.constants.AVAILABLE_CHARTS`)
+        as_json (:obj:`bool`):
+            set to `True` if overview wants to be retrieved as :obj:`json`, if not, 
+            leave default value (`False`).
+
+    Returns:
+        :obj:`pandas.DataFrame` - data
+            This function returns a :obj:`pandas.DataFrame` by default (if `as_json` parameter
+            is set to `False`, if `True` a :obj:`json` is returned), containing the COVID data 
+            of the introduced chart from the introduced country.
+
+    Raises:
+        ValueError: raised if any of the introduced parameters is not valid
+        ConnectionError: raised if connection with Worldometers failed
 
     """
 

@@ -114,8 +114,4 @@ When citing this repository on your publications please use the following **BibT
 }
 ```
 
-### All the data contained in this repository is updated once a day until the COVID-19 pandemic ends
-
----
-
-<p align="center"><img src="https://i.ibb.co/zhFrbZm/made-with-love.png" width="550" hspace="50"/></p>
+### All the data contained in this repository is updated once a day until the COVID-19 pandemic ends.
