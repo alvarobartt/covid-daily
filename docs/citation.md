@@ -10,6 +10,6 @@ When citing this repository on your publications please use the following **BibT
     year = { 2020 },
     publisher = {GitHub},
     journal = {GitHub Repository},
-    howpublished = {\url{https://github.com/alvarobartt/covid_daily}}
+    howpublished = {\url{https://github.com/alvarobartt/covid-daily}}
 }
 ```

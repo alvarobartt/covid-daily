@@ -21,8 +21,8 @@ setup(
     name='covid_daily',
     version='1.0',
     packages=find_packages(),
-    url="https://www.github.com/alvarobartt/covid_daily",
-    download_url='https://github.com/alvarobartt/covid_daily/archive/1.0.tar.gz',
+    url="https://www.github.com/alvarobartt/covid-daily",
+    download_url='https://github.com/alvarobartt/covid-daily/archive/1.0.tar.gz',
     license='MIT License',
     author='Alvaro Bartolome del Canto',
     author_email='alvarob96@usal.es',
@@ -48,8 +48,8 @@ setup(
     },
     python_requires='>=3',
     project_urls={
-        'Bug Reports': 'https://github.com/alvarobartt/covid_daily/issues',
-        'Source': 'https://github.com/alvarobartt/covid_daily',
+        'Bug Reports': 'https://github.com/alvarobartt/covid-daily/issues',
+        'Source': 'https://github.com/alvarobartt/covid-daily',
         'Documentation': 'https://covid_daily.readthedocs.io/'
     },
 )

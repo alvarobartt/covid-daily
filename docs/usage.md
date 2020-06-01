@@ -43,7 +43,7 @@ Date
 2020-05-13               60764
 ```
 
-Note that this functions lets the user change the country and the chart type from which data will be retrieved, containing different statistics. All the available countries can be found at [AVAILABLE_COUNTRIES](https://github.com/alvarobartt/covid-daily-data/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L1) and all the available chart types at [AVAILABLE_CHARTS](https://github.com/alvarobartt/covid-daily-data/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L41).
+Note that this functions lets the user change the country and the chart type from which data will be retrieved, containing different statistics. All the available countries can be found at [AVAILABLE_COUNTRIES](https://github.com/alvarobartt/covid-daily/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L1) and all the available chart types at [AVAILABLE_CHARTS](https://github.com/alvarobartt/covid-daily/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L41).
 
 ### Retrieve & Plot all the available charts
 

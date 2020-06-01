@@ -77,7 +77,7 @@ Date
 2020-05-13               60764
 ```
 
-Note that this functions lets the user change the country and the chart type from which data will be retrieved, containing different statistics. All the available countries can be found at [AVAILABLE_COUNTRIES](https://github.com/alvarobartt/covid-daily-data/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L1) and all the available chart types at [AVAILABLE_CHARTS](https://github.com/alvarobartt/covid-daily-data/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L41).
+Note that this functions lets the user change the country and the chart type from which data will be retrieved, containing different statistics. All the available countries can be found at [AVAILABLE_COUNTRIES](https://github.com/alvarobartt/covid-daily/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L1) and all the available chart types at [AVAILABLE_CHARTS](https://github.com/alvarobartt/covid-daily/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L41).
 
 ### Retrieve & Plot all the available charts
 
@@ -110,7 +110,7 @@ The resulting figure containing all the data (charts) from Spain, as previously 
 
 ## Contribute
 
-As this is an open source project it is **open to contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas**. There is an open tab of [issues](https://github.com/alvarobartt/covid_daily/issues) where anyone can open new issues if needed or navigate through them in order to solve them or contribute to its solving. Remember that **issues are not threads to describe multiple problems**, this does not mean that issues can't be discussed, but so to keep a structured project management, the same issue should not describe different problems, just the main one and some nested/related errors that may be found.
+As this is an open source project it is **open to contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas**. There is an open tab of [issues](https://github.com/alvarobartt/covid-daily/issues) where anyone can open new issues if needed or navigate through them in order to solve them or contribute to its solving. Remember that **issues are not threads to describe multiple problems**, this does not mean that issues can't be discussed, but so to keep a structured project management, the same issue should not describe different problems, just the main one and some nested/related errors that may be found.
 
 ## Citation
 
@@ -124,7 +124,7 @@ When citing this repository on your publications please use the following **BibT
     year = { 2020 },
     publisher = {GitHub},
     journal = {GitHub Repository},
-    howpublished = {\url{https://github.com/alvarobartt/covid_daily}}
+    howpublished = {\url{https://github.com/alvarobartt/covid-daily}}
 }
 ```
 
