@@ -47,12 +47,26 @@ print(overview.head())
 As already mentioned, this function retrieves an overview of the COVID-19 from all the available countries as indexed in Worldometers.info/coronavirus
 
 ```{r, engine='python', count_lines}
-    Country,Other TotalCases NewCases TotalDeaths NewDeaths  ... Serious,Critical TotCases/1M pop Deaths/1M pop TotalTests Tests/1M pop
-0           World  4,125,046  +26,758     280,957      +733  ...           47,637             529          36.0        NaN          NaN
-1             USA  1,347,325      +16      80,041        +4  ...           16,816           4,070           242  8,918,345       26,943
-2           Spain    264,663   +1,880      26,621      +143  ...            1,741           5,661           569  2,467,761       52,781
-3           Italy    218,268      NaN      30,395       NaN  ...            1,034           3,610           503  2,514,234       41,584
-4              UK    215,260      NaN      31,587       NaN  ...            1,559           3,171           465  1,728,443       25,461
+  Country,Other  TotalCases  NewCases  TotalDeaths  NewDeaths  TotalRecovered  \
+0         World     6282377     23127       374232        535         2854425   
+1           USA     1837170         0       106195          0          599867   
+2        Brazil      514992       143        29341         27          206555   
+3        Russia      414878      9035         4855        162          175877   
+4         Spain      286509         0        27127          0          196958   
+
+   ActiveCases  Serious,Critical  TotCases/1M pop  Deaths/1M pop  TotalTests  \
+0      3053720             53397              806             48           0   
+1      1131108             17075             5553            321    17672567   
+2       279096              8318             2424            138      930013   
+3       234146              2300             2843             33    10923108   
+4        62424               617             6128            580     4063843   
+
+   Tests/1M pop  Population  
+0             0           0  
+1         53417   330843477  
+2          4378   212434518  
+3         74852   145929507  
+4         86921    46753345  
 ```
 
 ### Retrieve chart's data from every country

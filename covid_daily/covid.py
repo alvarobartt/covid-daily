@@ -59,7 +59,8 @@ def overview(as_json=False):
 
     for th in thead:
         if is_visible(th) is True:
-            columns.append(th.text_content().replace('\n', '').replace(u'\xa0', u'').strip())
+            column = th.text_content().replace('\n', '').replace(u'\xa0', u'').strip()
+            columns.append(column)
 
     tbody = table.xpath(".//tbody/tr")
 
@@ -71,7 +72,17 @@ def overview(as_json=False):
 
     data = pd.DataFrame(rows, columns=columns)
 
-    data.replace('', np.nan, inplace=True)
+    data.drop(columns=['#'], inplace=True)
+
+    data["Country,Other"] = data['Country,Other'].str.replace(':', '')
+
+    cols = list(set(data.columns) - set(['Country,Other']))
+
+    data.replace('', '0', inplace=True)
+    data.replace('N/A', '0', inplace=True)
+
+    for col in cols:
+        data[col] = data[col].str.replace('+', '').str.replace(',', '').astype(float).astype(int)
 
     if as_json is False:
         return data
