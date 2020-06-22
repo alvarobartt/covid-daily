@@ -143,6 +143,8 @@ def data(country, chart, as_json=False):
     root = fromstring(req.text)
     scripts = root.xpath(".//script")
     
+    flag = False
+
     for script in scripts:
         if not script.text_content().strip().__contains__("Highcharts.chart"):
             continue
@@ -160,4 +162,9 @@ def data(country, chart, as_json=False):
         data = pd.DataFrame({'Date': y, chart['column']: x})
         data.set_index('Date', inplace=True)
 
-        return data
+        flag = True
+
+    if not flag:
+        raise RuntimeError("Information could not be retrieved since it is not available at Worldometers.info!")
+
+    return data

@@ -1,4 +1,4 @@
-# 🦠 :earth_africa: COVID-19 Daily Data 🦠 :earth_africa:
+# 🦠 COVID-19 Daily Data 🦠
 
 [![Python Version](https://img.shields.io/pypi/pyversions/covid_daily.svg)](https://pypi.org/project/covid_daily/)
 [![PyPi Version](https://img.shields.io/pypi/v/covid_daily.svg)](https://pypi.org/project/covid_daily/)
@@ -32,9 +32,13 @@ In order to get this package working you will need to **install it via pip** (wi
 
 You can find the **complete developer documentation** at: https://covid_daily.readthedocs.io/, hosted on [Read the Docs](https://readthedocs.org/) and generated using [sphinx](https://www.sphinx-doc.org/en/master/) with the theme [sphinx_rtd_theme](https://github.com/readthedocs/sphinx_rtd_theme) which is the standard Read the Docs theme for sphinx.
 
+## Kaggle
+
+You can find a Kaggle Notebook explaining all the features on detail and providing some useful plots at: https://www.kaggle.com/alvarob96/covid-daily-data-retrieval-plot. Make sure to upvote the Kaggle Notebook and follow me at Kaggle so as to stay tuned for all the updates: https://www.kaggle.com/alvarob96
+
 ## Usage
 
-### Retrieve the World overview
+### Retrieve the World's overview
 
 ```python
 import covid_daily
@@ -93,7 +97,7 @@ Date
 
 Note that this functions lets the user change the country and the chart type from which data will be retrieved, containing different statistics. All the available countries can be found at [AVAILABLE_COUNTRIES](https://github.com/alvarobartt/covid-daily/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L1) and all the available chart types at [AVAILABLE_CHARTS](https://github.com/alvarobartt/covid-daily/blob/7400dce5157e562858a9eff9dffea6694d198d32/covid_daily/constants.py#L41).
 
-### Retrieve & Plot all the available charts
+### Retrieve & Plot all the available charts for any country
 
 ```python
 import covid_daily
