@@ -82,7 +82,7 @@ def highcharts_parser(highchart_script, just_title=False):
 
     chart = '{' + ', '.join([
         CHART_XAXIS.search(chart).group(0).replace('},', '}'),
-        CHART_SERIES.search(chart).group(0).replace('],', ']'),
+        CHART_SERIES.search(chart).group(0)[::-1].replace(',]', ']', 1)[::-1].replace(', }', ' }')
     ]) + '}'
 
     chart = json.loads(chart)
