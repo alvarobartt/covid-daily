@@ -20,5 +20,16 @@ def test_overview():
         covid_daily.overview(as_json=param['as_json'])
 
 
+def test_data():
+    data = covid_daily.data(
+        country='france',
+        chart='graph-deaths-daily',
+        as_json=False
+    )
+
+    print(data.tail())
+
+
 if __name__ == "__main__":
     test_overview()
+    test_data()
