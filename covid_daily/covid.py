@@ -162,7 +162,7 @@ def data(country, chart, as_json=False):
         year = 2020
         for date_value in chart['xAxis']['categories']:
             y.append(datetime.strptime(f"{date_value}, {year}", '%b %d, %Y'))
-            if date_value == "31 Dec": year = 2021
+            if date_value == "Dec 31": year = 2021
 
         data = pd.DataFrame({'Date': y, chart['column']: x})
         data.set_index('Date', inplace=True)
