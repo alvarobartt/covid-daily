@@ -157,12 +157,7 @@ def data(country, chart, as_json=False):
         chart = highcharts_parser(highchart_script=script)
 
         x = chart['series'][0]['data']
-
-        y = list()
-        year = 2020
-        for date_value in chart['xAxis']['categories']:
-            y.append(datetime.strptime(f"{date_value}, {year}", '%b %d, %Y'))
-            if date_value == "Dec 31": year = 2021
+        y = [datetime.strptime(value, "%b %d, %Y") for value in chart['xAxis']['categories']]
 
         data = pd.DataFrame({'Date': y, chart['column']: x})
         data.set_index('Date', inplace=True)
