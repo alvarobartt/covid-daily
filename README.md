@@ -145,5 +145,3 @@ When citing this repository on your publications please use the following **BibT
     howpublished = {\url{https://github.com/alvarobartt/covid-daily}}
 }
 ```
-
-### All the data contained in this repository is updated once a day until the COVID-19 pandemic ends.
